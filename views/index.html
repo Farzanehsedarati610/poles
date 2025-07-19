@@ -1,18 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Pole Surveillance Grid</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8" />
+  <title>Pole Trace Surveillance</title>
+  <style>
+    body {
+      background-color: #0f1115;
+      color: #f1f1f1;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      padding: 20px;
+    }
+    svg {
+      border: 2px solid #ccc;
+      background-color: #1c1f26;
+      width: 90%;
+      height: 500px;
+    }
+    audio {
+      margin-top: 20px;
+      width: 300px;
+    }
+  </style>
 </head>
 <body>
-  <svg viewBox="0 0 1000 1000" id="pole-grid">
-    <circle cx="180" cy="240" r="8" fill="red" onclick="playAudio('liberty-echo-0715.mp3')" />
-    <circle cx="220" cy="280" r="8" fill="blue" onclick="playAudio('liberty-echo-0716.mp3')" />
+
+  <h1>Pole Surveillance Grid</h1>
+
+  <!-- Symbolic Map ViewBox -->
+  <svg viewBox="0 0 1000 1000">
+    <!-- Embedded pole locations -->
+    <circle cx="200" cy="300" r="10" fill="red" onclick="playAudio('liberty-echo-0715.mp3')" />
+    <text x="205" y="320" fill="#ddd" font-size="14px">Pole A</text>
+
+    <circle cx="400" cy="600" r="10" fill="blue" onclick="playAudio('liberty-echo-0716.mp3')" />
+    <text x="405" y="620" fill="#ddd" font-size="14px">Pole B</text>
   </svg>
 
+  <!-- Audio Control -->
   <audio id="audio-player" controls></audio>
 
-  <script src="js/player.js"></script>
+  <script>
+    function playAudio(fileName) {
+      const player = document.getElementById('audio-player');
+      player.src = fileName;
+      player.play();
+    }
+  </script>
+
 </body>
 </html>
 
