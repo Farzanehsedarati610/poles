@@ -40,6 +40,11 @@
   <circle cx="200" cy="300" r="10" fill="red" onclick="playAudio('liberty-echo-0715.mp3')" />
   <circle cx="400" cy="600" r="10" fill="blue" onclick="playAudio('liberty-echo-0716.mp3')" />
 </svg>
+function playAudio(fileName) {
+  const player = document.getElementById('audio-player');
+  player.src = fileName;
+  player.play();
+}
 
   <!-- Audio Control -->
   <audio id="audio-player" controls></audio>
