@@ -1,0 +1,14 @@
+<svg viewBox="0 0 1000 1000">
+  <!-- Symbolic pole mapping -->
+  <circle cx="150" cy="250" r="6" fill="red" onclick="playAudio('liberty-echo-0715.mp3')"/>
+  <circle cx="300" cy="400" r="6" fill="blue" onclick="playAudio('liberty-echo-0716.mp3')"/>
+</svg>
+<audio id="audio-player" controls></audio>
+<script>
+  function playAudio(file) {
+    const player = document.getElementById("audio-player");
+    player.src = file;
+    player.play();
+  }
+</script>
+
