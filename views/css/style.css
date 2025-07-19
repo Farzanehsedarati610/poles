@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0b0c10;
+  color: #c5c6c7;
+  text-align: center;
+  padding: 20px;
+}
+
+svg {
+  border: 1px solid #45a29e;
+  background-color: #1f2833;
+  width: 80%;
+  height: 500px;
+  margin: 20px auto;
+}
+

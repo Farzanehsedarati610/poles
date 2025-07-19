@@ -1,0 +1,15 @@
+{
+  "poles": [
+    {
+      "id": "Pole A",
+      "coords": [39.471703, -87.389320],
+      "audio": "liberty-echo-0715.mp3"
+    },
+    {
+      "id": "Pole B",
+      "coords": [39.471781, -87.389155],
+      "audio": "liberty-echo-0716.mp3"
+    }
+  ]
+}
+
